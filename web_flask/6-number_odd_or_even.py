@@ -49,10 +49,7 @@ def number_odd_or_even(n=None):
     H1 tag: “Number: n is even|odd” inside the tag BODY
     """
     if isinstance(n, int):
-        if n % 2:
-            eo = "odd"
-        else:
-            eo = "even"
+        eo = 'even' if n % 2 == 0 else 'odd'
         return render_template("6-number_odd_or_even.html", n=n, eo=eo)
 
 
